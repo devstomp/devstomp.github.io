@@ -2,6 +2,7 @@ var http = require('http'),
     request = require('request');
 
 /**
+ * https://github.com/imjching/node-hackerearth
  * Returns a HackerEarth API wrapper object of the specified version. Currently,
  * only version 3 is supported by this wrapper as HackerEarth has already discontinued
  * version 2.
