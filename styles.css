@@ -21,6 +21,10 @@ body{
 .fileUpload i{
   padding:0%;
 }
+.fileUpload button{
+
+
+}
 .fileUpload input.upload {
     position: absolute;
     top: 0;
@@ -39,6 +43,12 @@ body{
 }
 .post-icons i{
 padding:2%;display:block-inline;
+}
+.post-icons button{
+  float:right;
+  padding: 1%;
+  display: inline-block;;
+
 }
 .content{
   padding: 3%;

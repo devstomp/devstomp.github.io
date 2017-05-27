@@ -12,6 +12,17 @@
   <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
   <link  rel="stylesheet" type="text/css" href="styles.css" />
   <script src="filehandler.js"></script>
+  <script src="scripts.js"></script>
+  <script>var config = {
+    apiKey: "AIzaSyDp3FFbviWq7Z-IhECOGdqY_ezzAj3197I",
+    authDomain: "brigade-929f9.firebaseapp.com",
+    databaseURL: "https://brigade-929f9.firebaseio.com",
+    projectId: "brigade-929f9",
+    storageBucket: "brigade-929f9.appspot.com",
+    messagingSenderId: "54936219962"
+  };
+  firebase.initializeApp(config);
+</script></script>
 </head>
 <body>
 <div class="content-main-outline">
@@ -30,14 +41,13 @@
 
   <i class="fa fa-github fa fa-3x" aria-hidden="true"></i>
   <i class="fa fa-bitbucket fa fa-3x" aria-hidden="true"></i>
+  <button class="btn-primary" onclick="post()">Post()</button>
 </div>
 <div class="Uploads" id="fileplace">
 
 </div>
 <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
-
-      <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
