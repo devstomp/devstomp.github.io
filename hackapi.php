@@ -18,7 +18,7 @@ class HackApi
 	private $source_code="for letter in 'Python':
    				print 'Current Letter :', letter"; // the source code
 	private $input=""; // the input you give
-	private $client_secret="e3480c1326593adb6792210de380daf881bebbc2"; // your secret client code
+	private $client_secret=""; // your secret client code
 	
 	private $curled=""; // this is the data we receive from hackerearth!
 	private $parameters=""; // the parameterised version.
