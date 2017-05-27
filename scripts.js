@@ -1,4 +1,5 @@
-console.log(user);
+
+var user;
 var config = {
   apiKey: "AIzaSyDp3FFbviWq7Z-IhECOGdqY_ezzAj3197I",
   authDomain: "brigade-929f9.firebaseapp.com",
@@ -7,13 +8,14 @@ var config = {
   storageBucket: "brigade-929f9.appspot.com",
   messagingSenderId: "54936219962"
 };
+console.log(user);
 function signingoogle(){
   var provider = new firebase.auth.GoogleAuthProvider();
 firebase.auth().signInWithPopup(provider).then(function(result) {
   // This gives you a Google Access Token. You can use it to access the Google API.
   var token = result.credential.accessToken;
   // The signed-in user info.
-  var user = result.user;
+   user = result.user;
 
 }).catch(function(error) {
   // Handle Errors here.
@@ -33,7 +35,7 @@ function signingithub(){
   // This gives you a GitHub Access Token. You can use it to access the GitHub API.
   var token = result.credential.accessToken;
   // The signed-in user info.
-  var user = result.user;
+ user = result.user;
   console.log(user);
   // ...
 }).catch(function(error) {
