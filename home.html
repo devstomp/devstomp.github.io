@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
   <link  rel="stylesheet" type="text/css" href="styles.css" />
+  <script src="filehandler.js"></script>
 </head>
 <body>
 <div class="content-main-outline">
@@ -19,12 +20,19 @@
 <div class="newpost">
   <div class="form-group">
   <label for="usr">New Post:</label>
-  <textarea type="textarea" class="form-control" id="usr"></textarea>
+  <textarea type="textarea" class="form-control" id="comment"></textarea>
   <div class="post-icons">
+    <div class="fileUpload" >
+        <i class="fa fa-file fa fa-3x" aria-hidden="true"></i>
+        <input type="file" class="upload" id="think"/>
+    </div>
   <i class="fa fa-code fa fa-3x" aria-hidden="true"></i>
-  <i class="fa fa-file fa fa-3x" aria-hidden="true"></i>
+
   <i class="fa fa-github fa fa-3x" aria-hidden="true"></i>
   <i class="fa fa-bitbucket fa fa-3x" aria-hidden="true"></i>
+</div>
+<div class="Uploads" id="fileplace">
+
 </div>
 </div>
 

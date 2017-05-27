@@ -76,7 +76,7 @@ function initApp() {
       var uid = user.uid;
       var providerData = user.providerData;
       console.log(displayName);
-      window.location.href = home.html;
+      window.location.href = "home.html";
       // [START_EXCLUDE]
   //    document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
     //  document.getElementById('quickstart-sign-in').textContent = 'Sign out';
