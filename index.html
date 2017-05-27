@@ -13,6 +13,14 @@
       font-size:125%;
     }
     
+    div::after {
+  content: "";
+  background: url(image.jpg);
+  opacity: 0.5;
+  position: absolute;
+  z-index: -1;   
+}
+    
   </style>
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -41,7 +49,7 @@
   <p>Find code online and share your code snippets.</p>
   <p>Test snippets quicky onsite without downloads.</p>
   
-  <img src="LogoBlue.png" style= "width: 551px;height: 168px;position:fixed;right:20px;bottom:20px;"> 
+  <img src="LogoBlue.png" style= "width: 551px;height: 168px;opacity: 0.5; position:fixed; top: 0;left: 0;bottom: 0;right: 0;z-index: -1;"> 
 
 </body>
 </html>
