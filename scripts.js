@@ -1,4 +1,4 @@
-
+console.log(user);
 var config = {
   apiKey: "AIzaSyDp3FFbviWq7Z-IhECOGdqY_ezzAj3197I",
   authDomain: "brigade-929f9.firebaseapp.com",
@@ -14,7 +14,7 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
   var token = result.credential.accessToken;
   // The signed-in user info.
   var user = result.user;
-  console.log(user);
+
 }).catch(function(error) {
   // Handle Errors here.
   var errorCode = error.code;
@@ -25,6 +25,7 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
   var credential = error.credential;
   // ...
 });
+
 }
 function signingithub(){
   var provider = new firebase.auth.GithubAuthProvider();
