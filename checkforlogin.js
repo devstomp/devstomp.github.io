@@ -6,6 +6,9 @@ var config = {
   storageBucket: "brigade-929f9.appspot.com",
   messagingSenderId: "54936219962"
 };
+window.onload = function() {
+      initApp();
+    };
 function initApp() {
   // Listening for auth state changes.
   // [START authstatelistener]
