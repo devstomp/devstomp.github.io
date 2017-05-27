@@ -5,11 +5,31 @@ body{
   background-color: #36486b;
 
 }
-.content-main{
+.content-main-outline{
   width:90%;
   display: inline-block;
+
+
+}
+.newpost{
+  background-color: white;
+  padding: 3%;
+}
+.post-icons i{
+padding:1%;display:block-inline;
+}
+.content{
+  padding: 3%;
+  background-color: white;
+}
+.content-main{
+
+   background-color: #e9ebee;
+
+  padding: 5% 10% 10% 5%;
 }
 .explorer{
+  position: static;
 color: white;
   display: inline-block;
 width: 10%;
