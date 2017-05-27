@@ -15,7 +15,8 @@ If you make this even more awesome, please send a pull request on github!
 class HackApi
 {
 	private $language=""; // the language of your code
-	private $source_code=""; // the source code
+	private $source_code="for letter in 'Python':
+   				print 'Current Letter :', letter"; // the source code
 	private $input=""; // the input you give
 	private $client_secret=""; // your secret client code
 	
