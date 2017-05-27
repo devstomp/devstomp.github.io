@@ -1,4 +1,4 @@
-var provider = new firebase.auth.GoogleAuthProvider();
+
 var config = {
   apiKey: "AIzaSyDp3FFbviWq7Z-IhECOGdqY_ezzAj3197I",
   authDomain: "brigade-929f9.firebaseapp.com",
@@ -7,7 +7,8 @@ var config = {
   storageBucket: "brigade-929f9.appspot.com",
   messagingSenderId: "54936219962"
 };
-function signin(){
+function signingoogle(){
+  var provider = new firebase.auth.GoogleAuthProvider();
 firebase.auth().signInWithPopup(provider).then(function(result) {
   // This gives you a Google Access Token. You can use it to access the Google API.
   var token = result.credential.accessToken;
