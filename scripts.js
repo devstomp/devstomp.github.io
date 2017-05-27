@@ -38,6 +38,7 @@ function signingithub(){
 }).catch(function(error) {
   // Handle Errors here.
   var errorCode = error.code;
+  alert(error);
   console.log(error);
   var errorMessage = error.message;
   // The email of the user's account used.
