@@ -100,6 +100,7 @@ function displayPost(key,username, comments, filebin,type, snippet, mainC, time 
       inline.style="margin:0%";
       load.style="text-align:center";
       loadmore.style="width:100%";
+      loadmore.innerHTML = "Load more";
       loadmore.className="btn btn-default";
       main.innerHTML= authuser.name+":"+mainC+" - "+type;
       makeComment(key,comments.Author, comments.ProfilePic, comments.Words, commentsection);
