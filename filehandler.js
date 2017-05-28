@@ -1,5 +1,4 @@
 var fileinput = $("input:file");
-
 var index=0;
 var fileplacing = $(".Uploads")
 var filelists=[];
@@ -35,7 +34,6 @@ $(document).on('change', fileinput, function(e){
     console.log(filelists);
   });
 function post(){
-
   var metadata = {
     'Author': authuser.email,
   };

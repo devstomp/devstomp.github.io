@@ -8,7 +8,6 @@ var config = {
   storageBucket: "brigade-929f9.appspot.com",
   messagingSenderId: "54936219962"
 };
-
 function signingoogle(){
   var provider = new firebase.auth.GoogleAuthProvider();
 firebase.auth().signInWithPopup(provider).then(function(result) {
@@ -21,7 +20,6 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
   var email = error.email;
   var credential = error.credential;
 });
-
 initApp();
 }
 function signingithub(){
