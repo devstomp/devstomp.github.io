@@ -52,7 +52,7 @@ function post(){
   var storageRef = firebase.storage().ref();
       for (var i = 0; i < filelists.length; i++) {
       try{  filepath.push(authuser.uid+'/'+ filelists[i][0].name);
-        var Ref = storageRef.child(authuser.email+'/'+ filelists[i][0].name);
+        var Ref = storageRef.child(authuser.uid+'/'+ filelists[i][0].name);
           Ref.put(filelists[i][0], metadata).then(function(snapshot) {
               console.log("Uploaded");
           });
@@ -64,7 +64,7 @@ console.log(e);
 
     var postData = {
       Time: timenow,
-      Author: authuser.email,
+      Author: authuser.uid,
       MainComment:maincomment.value,
       FilePath:filepath,
       Type:"HTML",
@@ -75,6 +75,6 @@ console.log(e);
     var newPostKey = firebase.database().ref().child('HTML').push().key;
      var updates = {};
      updates['HTML/' + newPostKey] = postData;
-     updates['users/'+authuser.email+'/'+newPostKey] = postData;
+     updates['users/'+authuser.uid+'/'+newPostKey] = postData;
      return firebase.database().ref().update(updates);
     }
