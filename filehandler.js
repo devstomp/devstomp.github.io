@@ -114,7 +114,7 @@ function displayPost(key,username, comments, filebin,type, snippet, mainC, time 
           }
       //  for(var i=0;i<comments.length; i++){
       if(comments!=[['','']];)
-      
+
           makeComment(key,comments.Author, comments.ProfilePic, comments.Words, commentsection);
         //}
         load.removeChild(loadmore);
@@ -169,8 +169,7 @@ function createSnippet(snip, dev){
       image.src=img;
       image.className = "img-circle";
       //this should be working
-      image.width = "20px";
-      image.height="20px";
+
       fname.style = "display:inline-block;font-size:80%;"
       speach.style = "font-size:40%;";
       div.appendChild(image);
@@ -178,6 +177,8 @@ function createSnippet(snip, dev){
       div.appendChild(breaking);
       div.appendChild(speach);
       dev.appendChild(div);
+      image.width = "20px";
+      image.height="20px";
     }
     function writeComment(key,writing){
       var d = new Date();
