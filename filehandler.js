@@ -65,7 +65,7 @@ console.log(filelists);
   });
 function post(){
   var metadata = {
-    authsuser: user.email,
+    Author: authuser.email,
   };
   var storageRef = firebase.storage().ref();
 
