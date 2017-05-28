@@ -172,7 +172,7 @@ function createSnippet(snip, dev){
         Author:authuser.displayName,
         Time:d.getTime(),
         ProfilePic:authuser.photoURL,
-        Words, writing
+        Words: writing
       };
       var newcomment = firebase.database().ref().child('HTML/'+key+"Comments").set({comment});
 
