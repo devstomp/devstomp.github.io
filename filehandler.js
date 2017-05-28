@@ -22,21 +22,22 @@ function initApp() {
   });
 }
 $(document).on('change', fileinput, function(e){
- var input = e.target;
-filelists.push(input.files);
-    for (var i = 0; i < input.files.length; i++) {
-          console.log(input.files[i].name);
-          var div = document.createElement("div");
-          div.className = "well well-sm";
-          div.innerHTML = e.target.files[i].name;
-          fileplace.appendChild(div);
-        }
+  var input = e.target;
+  filelists.push(input.files);
+      for (var i = 0; i < input.files.length; i++) {
+        console.log(input.files[i].name);
+        var div = document.createElement("div");
+        div.className = "well well-sm";
+        div.innerHTML = e.target.files[i].name;
+        fileplace.appendChild(div);
+      }
     console.log(input.files);
-console.log(filelists);
+    console.log(filelists);
   });
 function post(){
+
   var metadata = {
-    Author: authuser.email,
+    'Author': authuser.email,
   };
   var storageRef = firebase.storage().ref();
       for (var i = 0; i < filelists.length; i++) {
