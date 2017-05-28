@@ -101,7 +101,7 @@ function displayPost(key,username, comments, filebin,type, snippet, mainC, time 
       load.style="text-align:center";
       loadmore.style="width:100%";
       loadmore.className="btn btn-default";
-      main.innerHTML= username + ": "+mainC+" - "+type+" --- "+time;
+      main.innerHTML= authuser.name+":"+mainC+" - "+type;
       makeComment(key,comments.Author, comments.ProfilePic, comments.Words, commentsection);
 
         var storageRef = firebase.storage().ref();
@@ -141,7 +141,7 @@ function displayPost(key,username, comments, filebin,type, snippet, mainC, time 
       document.getElementById("Content").appendChild(outline);
 
     }
-    
+
 
 function createSnippet(snip, dev){
 
