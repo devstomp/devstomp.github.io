@@ -174,7 +174,7 @@ function createSnippet(snip, dev){
         ProfilePic:authuser.photoURL,
         Words: writing
       };
-      var newcomment = firebase.database().ref().child('HTML/'+key+"Comments").set({comment});
+      var newcomment = firebase.database().ref().child('HTML/'+key+"/Comments/").set({comment});
 
 
     }
