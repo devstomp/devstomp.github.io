@@ -5,15 +5,25 @@ var snippet;
 var maincomment;
 var filelists=[];
 var authuser;
+
 function initApp() {
   snippet =document.getElementById("htmlsnippet");
   maincomment = document.getElementById("comment");
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       authuser = user;
+    //  contentMain();
     } else {
       // window.location.href = "login.html";
     }
+  });
+}
+function contentMain(){
+  var htmlRef = firebase.database().ref('HTML');
+  htmlRef.orderByKey().on('value', function(snapshot){
+      snapshot.forEach(function(childSnapshot) {
+        displayPost(childSnapshot.val().Author,childSnapshot.val().Comments,childSnapshot.val().FilePath,childSnapshot.val().Type, childSnapshot.val().Snippet,  childSnapshot.val().MainComment, childSnapshot.val().Time);
+      });
   });
 }
 $(document).on('change', fileinput, function(e){
@@ -50,7 +60,7 @@ function post(){
           });
 
     }catch(e){
-console.log(e);
+      console.log(e);
     }
   }var comments=[['','']];
 
@@ -69,8 +79,8 @@ console.log(e);
      updates['HTML/' + newPostKey] = postData;
      updates['users/'+authuser.uid+'/'+newPostKey] = postData;
      return firebase.database().ref().update(updates);
-    }
-    function displayPost(username, comments, filebin,type, snippet, mainC, time ){
+}
+function displayPost(username, comments, filebin,type, snippet, mainC, time ){
       var outline = document.createElement("div");
       var inline= document.createElement("div");
       var main = document.createElement("p");
@@ -124,10 +134,10 @@ function createSnippet(snip, dev){
 
 
 
-var temp = document.createElement('div');
-temp.innerHTML = snip;
-var htmlObject = temp.firstChild;
-dev.appendChild(htmlObject);
+  var temp = document.createElement('div');
+  temp.innerHTML = snip;
+  var htmlObject = temp.firstChild;
+  dev.appendChild(htmlObject);
 }
     function makeComment(name, img, text, dev){
       var div = document.createElement("div");
