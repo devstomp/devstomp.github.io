@@ -63,13 +63,13 @@ console.log(e);
   }var comments=[['','']];
 
     var postData = {
-      "Time": timenow,
-      "Author": authuser.email,
-      "MainComment":maincomment.value,
-      "FilePath":filepath,
-      "Type":"HTML",
-      "Snippet":snippet.value,
-      "Comments":comments
+      Time: timenow,
+      Author: authuser.email,
+      MainComment:maincomment.value,
+      FilePath:filepath,
+      Type:"HTML",
+      Snippet:snippet.value,
+      Comments:comments
     };
 
     var newPostKey = firebase.database().ref().child('HTML').push().key;
