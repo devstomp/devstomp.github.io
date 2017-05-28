@@ -23,8 +23,8 @@ function contentMain(){
   htmlRef.orderByKey().on('value', function(snapshot){
     console.log(snapshot.val());
       snapshot.forEach(function(childSnapshot) {
-          console.log(childSnapshot.val().Author);
-        displayPost(childSnapshot.key,childSnapshot.val().Author,childSnapshot.val().Comments,childSnapshot.val().FilePath,childSnapshot.val().Type, childSnapshot.val().Snippet,  childSnapshot.val().MainComment, childSnapshot.val().Time);
+          console.log(childSnapshot.val().Comments);
+      //.  displayPost(childSnapshot.key,childSnapshot.val().Author,childSnapshot.val().Comments,childSnapshot.val().FilePath,childSnapshot.val().Type, childSnapshot.val().Snippet,  childSnapshot.val().MainComment, childSnapshot.val().Time);
       });
   });
 }
