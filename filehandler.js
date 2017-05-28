@@ -44,14 +44,14 @@ function post(){
   alert("snippet" + snippet + "    main comment" + maincomment);
   var d = new Date();
     var metadata = {
-      'Author': authuser.email,
+      'Author': authuser.uid,
     };
   var timenow = d.getTime();
   var filepath=[];
 
   var storageRef = firebase.storage().ref();
       for (var i = 0; i < filelists.length; i++) {
-      try{  filepath.push(authuser.email+'/'+ filelists[i][0].name);
+      try{  filepath.push(authuser.uid+'/'+ filelists[i][0].name);
         var Ref = storageRef.child(authuser.email+'/'+ filelists[i][0].name);
           Ref.put(filelists[i][0], metadata).then(function(snapshot) {
               console.log("Uploaded");
