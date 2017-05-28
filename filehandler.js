@@ -1,3 +1,4 @@
+
 var fileinput = $("input:file");
 var index=0;
 var fileplacing = $(".Uploads");
@@ -164,6 +165,7 @@ function createSnippet(snip, dev){
       speach.innerHTML = text;
       image.src=img;
       image.className = "img-circle";
+      //this should be working
       image.width = "20px";
       image.height="20px";
       fname.style = "display:inline-block;font-size:80%;"
