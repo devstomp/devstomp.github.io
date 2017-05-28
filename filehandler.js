@@ -104,7 +104,7 @@ function displayPost(key,username, comments, filebin,type, snippet, mainC, time 
       loadmore.innerHTML = "Load more";
       loadmore.className="btn btn-default";
       main.innerHTML= authuser.name+":"+mainC+" - "+type;
-      if(comments!=[['','']];)
+      if(comments!=[['','']])
       makeComment(key,comments.Author, comments.ProfilePic, comments.Words, commentsection);
 
         var storageRef = firebase.storage().ref();
@@ -113,7 +113,7 @@ function displayPost(key,username, comments, filebin,type, snippet, mainC, time 
               commentsection.removeChild(commentsection.lastChild);
           }
       //  for(var i=0;i<comments.length; i++){
-      if(comments!=[['','']];)
+      if(comments!=[['','']])
 
           makeComment(key,comments.Author, comments.ProfilePic, comments.Words, commentsection);
         //}
