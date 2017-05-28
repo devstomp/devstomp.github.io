@@ -3,13 +3,13 @@ var fileinput = $("input:file");
 var index=0;
 var fileplacing = $(".Uploads")
 var filelists=[];
-
+var authuser;
 function initApp() {
   // Listening for auth state changes.
   // [START authstatelistener]
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-
+authuser = user;
       // User is signed in.
       var displayName = user.displayName;
       var email = user.email;
@@ -65,7 +65,7 @@ console.log(filelists);
   });
 function post(){
   var metadata = {
-    author: user.email,
+    authsuser: user.email,
   };
   var storageRef = firebase.storage().ref();
 
