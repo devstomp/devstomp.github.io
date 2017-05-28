@@ -102,14 +102,14 @@ function displayPost(key,username, comments, filebin,type, snippet, mainC, time 
       loadmore.style="width:100%";
       loadmore.className="btn btn-default";
       main.innerHTML= username + ": "+mainC+" - "+type+" --- "+time;
-      makeComment(comments[0].Author, comments[0].ProfilePic, comments[0].Words, commentsection);
+      makeComment(comments.Author, comments.ProfilePic, comments.Words, commentsection);
       loadmore.onclick = function(){
         while (commentsection.hasChildNodes()) {
               commentsection.removeChild(commentsection.lastChild);
           }
-        for(var i=0;i<comments.length; i++){
+      //  for(var i=0;i<comments.length; i++){
           makeComment(comments.Author, comments.ProfilePic, comments.Words, commentsection);
-        }
+        //}
         load.removeChild(loadmore);
         load.appendChild(newComment);
       }
