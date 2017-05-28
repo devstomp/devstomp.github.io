@@ -89,3 +89,20 @@ console.log(e);
       div.appendChild(speech);
       dev.appendChild(div);
     }
+  function  makeFileDownload(finame, downloadurl, dev){
+    var filename = finame;
+    var a  = document.createElement("a");
+    var button= document.createElement("button");
+    var text = document.createElement("p");
+    text.innerHTML = filename;
+    text.style="display:inline-block;"
+    button.className = "btn btn-primary";
+    button.innerHTML = "Download";
+    a.href=downloadurl;
+    a.download = filename;
+    a.style="display:inline-block;";
+    a.appendChild(button);
+    dev.appendChild(text);
+    dev.appendChild(a);
+
+  }
