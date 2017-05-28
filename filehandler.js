@@ -108,7 +108,7 @@ function displayPost(key,username, comments, filebin,type, snippet, mainC, time 
               commentsection.removeChild(commentsection.lastChild);
           }
         for(var i=0;i<comments.length; i++){
-          makeComment(comments[i].Author, comments[i].ProfilePic, comments[i].Words, commentsection);
+          makeComment(comments.Author, comments.ProfilePic, comments.Words, commentsection);
         }
         load.removeChild(loadmore);
         load.appendChild(newComment);
