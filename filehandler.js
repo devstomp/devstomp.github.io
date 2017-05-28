@@ -165,7 +165,7 @@ function createSnippet(snip, dev){
       div.appendChild(image);
       div.appendChild(fname);
       div.appendChild(breaking);
-      div.appendChild(speech);
+      div.appendChild(speach);
       dev.appendChild(div);
     }
     function writeComment(key,writing){
