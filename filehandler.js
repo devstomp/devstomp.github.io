@@ -21,9 +21,9 @@ function initApp() {
 function contentMain(){
   var htmlRef = firebase.database().ref('HTML');
   htmlRef.orderByKey().on('value', function(snapshot){
-    console.log(snapshot);
+    console.log(snapshot.val());
       snapshot.forEach(function(childSnapshot) {
-          console.log(childSnapshot);
+          console.log(childSnapshot.val());
         displayPost(childSnapshot.key,childSnapshot.val().Author,childSnapshot.val().Comments,childSnapshot.val().FilePath,childSnapshot.val().Type, childSnapshot.val().Snippet,  childSnapshot.val().MainComment, childSnapshot.val().Time);
       });
   });
