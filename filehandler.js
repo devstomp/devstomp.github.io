@@ -129,7 +129,7 @@ function displayPost(key,username, comments, filebin,type, snippet, mainC, time 
       for(var i=0; i<filebin.length;i++){
         storageRef.child(filebin[i]).getDownloadURL().then(function(url) {
           console.log(filebin);
-          makeFileDownload(filebin[i][0], url,filesdownload);
+          makeFileDownload(filebin[i], url,filesdownload);
       });
       }
       inline.appendChild(main);
