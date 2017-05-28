@@ -3,7 +3,7 @@ var fileinput = $("input:file");
 var index=0;
 var fileplacing = $(".Uploads")
 var filelists=[];
-/*
+
 function initApp() {
   // Listening for auth state changes.
   // [START authstatelistener]
@@ -43,7 +43,7 @@ function initApp() {
   //document.getElementById('quickstart-sign-in').addEventListener('click', toggleSignIn, false);
 }
 
-*/
+
 $(document).on('change', fileinput, function(e){
 
  var input = e.target;
