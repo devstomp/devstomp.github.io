@@ -39,7 +39,7 @@ function post(){
   };
   var storageRef = firebase.storage().ref();
       for (var i = 0; i < filelists.length; i++) {
-        var Ref = storageRef.child(filelists[i][0].name);
+        var Ref = storageRef.child( authuser.email+'/'+ filelists[i][0].name);
           Ref.put(filelists[i][0], metadata).then(function(snapshot) {
               console.log("Uploaded");
           });
