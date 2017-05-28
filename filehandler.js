@@ -22,7 +22,7 @@ function contentMain(){
   var htmlRef = firebase.database().ref('HTML');
   htmlRef.orderByKey().on('value', function(snapshot){
       snapshot.forEach(function(childSnapshot) {
-        displayPost(childSnapshot.val().Author,childSnapshot.val().Comments,childSnapshot.val().FilePath,childSnapshot.val().Type, childSnapshot.val().Snippet,  childSnapshot.val().MainComment, childSnapshot.val().Time);
+        displayPost(childSnapshot.key,childSnapshot.val().Author,childSnapshot.val().Comments,childSnapshot.val().FilePath,childSnapshot.val().Type, childSnapshot.val().Snippet,  childSnapshot.val().MainComment, childSnapshot.val().Time);
       });
   });
 }
@@ -80,7 +80,7 @@ function post(){
      updates['users/'+authuser.uid+'/'+newPostKey] = postData;
      return firebase.database().ref().update(updates);
 }
-function displayPost(username, comments, filebin,type, snippet, mainC, time ){
+function displayPost(key,username, comments, filebin,type, snippet, mainC, time ){
       var outline = document.createElement("div");
       var inline= document.createElement("div");
       var main = document.createElement("p");
@@ -89,6 +89,10 @@ function displayPost(username, comments, filebin,type, snippet, mainC, time ){
       var load= document.createElement("div");
       var loadmore = document.createElement("button");
       var snippetSpace= document.createElement("div");
+      var newComment= document.createElement("input");
+      newComment.type="text";
+      newComment.className ="form-control";
+      newComment.id= key;
       inline.className="content-container";
       outline.className = "content-card";
       inline.style="margin:0%";
@@ -105,7 +109,13 @@ function displayPost(username, comments, filebin,type, snippet, mainC, time ){
           makeComment(comments[i].Author, comments[i].ProfilePic, comments[i].Words, commentsection);
         }
         load.removeChild(loadmore);
+        load.appendChild(newComment);
       }
+    newComment.keyup(function(event){
+    if(event.keyCode == 13){
+    writeComment(newComment.id, newComment.value);
+          }
+      });
       if(snippet!=""){
         createSnippet(snippet,snippetSpace);
       }
@@ -123,8 +133,6 @@ function displayPost(username, comments, filebin,type, snippet, mainC, time ){
       outline.appendChild(inline);
       document.getElementById("Content").appendChild(outline);
 
-
-
     }
     function getSecondPart(str) {
     return str.split('/')[1];
@@ -139,7 +147,7 @@ function createSnippet(snip, dev){
   var htmlObject = temp.firstChild;
   dev.appendChild(htmlObject);
 }
-    function makeComment(name, img, text, dev){
+    function makeComment(key,name, img, text, dev){
       var div = document.createElement("div");
       div.className = "comments";
       var image= document.createElement("img");
@@ -158,15 +166,16 @@ function createSnippet(snip, dev){
       div.appendChild(speech);
       dev.appendChild(div);
     }
-    function writeComment(writing){
+    function writeComment(key,writing){
       var d = new Date();
-
       var comment={
         Author:authuser.displayName,
         Time:d.getTime(),
         ProfilePic:authuser.photoURL,
         Words, writing
       };
+      var newcomment = firebase.database().ref().child('HTML/'+key+"Comments").set({comment});
+
 
     }
   function  makeFileDownload(finame, downloadurl, dev){
