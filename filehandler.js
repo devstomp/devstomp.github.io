@@ -103,6 +103,8 @@ function displayPost(key,username, comments, filebin,type, snippet, mainC, time 
       loadmore.className="btn btn-default";
       main.innerHTML= username + ": "+mainC+" - "+type+" --- "+time;
       makeComment(key,comments.Author, comments.ProfilePic, comments.Words, commentsection);
+
+        var storageRef = firebase.storage().ref();
       loadmore.onclick = function(){
         while (commentsection.hasChildNodes()) {
               commentsection.removeChild(commentsection.lastChild);
@@ -119,7 +121,7 @@ function displayPost(key,username, comments, filebin,type, snippet, mainC, time 
          }
       }
 
-  
+
       if(snippet!=""){
         createSnippet(snippet,snippetSpace);
       }
