@@ -24,10 +24,13 @@ $(document).on('change', fileinput, function(e){
   var input = e.target;
   filelists.push(input.files);
 
-      
+
         var div = document.createElement("div");
         div.className = "well well-sm";
-        div.innerHTML = e.target.files[0].name;
+        try{div.innerHTML = e.target.files[0].name;
+        }catch(e){
+          console.log(e);
+        }
         fileplace.appendChild(div);
 
     console.log(input.files);
@@ -46,13 +49,16 @@ function post(){
   var maincomment = $("#comment").value;
   var storageRef = firebase.storage().ref();
       for (var i = 0; i < filelists.length; i++) {
-        filepath.push(authuser.email+'/'+ filelists[i][0].name);
+      try{  filepath.push(authuser.email+'/'+ filelists[i][0].name);
         var Ref = storageRef.child(authuser.email+'/'+ filelists[i][0].name);
           Ref.put(filelists[i][0], metadata).then(function(snapshot) {
               console.log("Uploaded");
           });
-      }
-      var comments=[['','']];
+
+    }catch(e){
+console.log(e);
+    }
+  }var comments=[['','']];
 
     var postData = {
       "Time": timenow,
@@ -63,9 +69,10 @@ function post(){
       "Snippet":snippet,
       "Comments":comments
     };
+
     var newPostKey = firebase.database().ref().child('HTML').push().key;
      var updates = {};
      updates['HTML/' + newPostKey] = postData;
      updates['users/'+authuser+email+'/'+newPostKey] = postData;
-     firebase.database().ref().update(updates);
+     return firebase.database().ref().update(updates);
     }
