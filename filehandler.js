@@ -24,14 +24,14 @@ $(document).on('change', fileinput, function(e){
   var input = e.target;
   filelists.push(input.files);
 
-        console.log(input.files[0].name);
+      
         var div = document.createElement("div");
         div.className = "well well-sm";
         div.innerHTML = e.target.files[0].name;
         fileplace.appendChild(div);
 
     console.log(input.files);
-    console.log(filelists);
+    console.log(filelists[0][0].name);
   });
 
 function post(){
