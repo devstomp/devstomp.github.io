@@ -119,9 +119,7 @@ function displayPost(key,username, comments, filebin,type, snippet, mainC, time 
          }
       }
 
-    newComment.onkeyup(function(event){
-
-      });
+  
       if(snippet!=""){
         createSnippet(snippet,snippetSpace);
       }
