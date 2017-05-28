@@ -23,6 +23,7 @@ function contentMain(){
   htmlRef.orderByKey().on('value', function(snapshot){
     console.log(snapshot);
       snapshot.forEach(function(childSnapshot) {
+          console.log(childSnapshot);
         displayPost(childSnapshot.key,childSnapshot.val().Author,childSnapshot.val().Comments,childSnapshot.val().FilePath,childSnapshot.val().Type, childSnapshot.val().Snippet,  childSnapshot.val().MainComment, childSnapshot.val().Time);
       });
   });
