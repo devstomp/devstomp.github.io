@@ -3,28 +3,20 @@ body{
 }
 .nav{
   background-color: #36486b;
-
 }
 .content-main-outline{
   width:90%;
   display: inline-block;
-
-
 }
 .fileUpload {
   padding:1%;
   display: inline-block;
     position: relative;
-
-
 }
 .fileUpload i{
   padding:0%;
 }
-.fileUpload button{
 
-
-}
 .fileUpload input.upload {
     position: absolute;
     top: 0;
@@ -36,7 +28,6 @@ body{
     opacity: 0;
     filter: alpha(opacity=0);
 }
-
 .newpost{
   background-color: white;
   padding: 3%;
@@ -49,24 +40,21 @@ cursor: pointer;
   float:right;
   padding: 1%;
   display: inline-block;;
-
 }
 .content{
   padding: 3%;
   background-color: white;
 }
 .content-main{
-
-   background-color: #e9ebee;
-
+  background-color: #e9ebee;
   padding: 5% 10% 10% 5%;
 }
 .explorer{
   position: static;
-color: white;
+  color: white;
   display: inline-block;
-width: 10%;
-float:right;
+  width: 10%;
+  float:right;
 }
 .explorer a{
   height: 33%;
@@ -74,60 +62,46 @@ float:right;
   padding: 15%;
 }
 .mainLogo{
-    display: inline-block;
-font-size: 200%;
-padding: 1%;
-color:white;
-
+  display: inline-block;
+  font-size: 200%;
+  padding: 1%;
+  color:white;
 }
 .topnav {
   float:right;
   display: inline-block;
-    color: white;
-    padding: 2%;
-    overflow: hidden;
-
+  color: white;
+  padding: 2%;
+  overflow: hidden;
 }
-
-/* Style the links inside the navigation bar */
 .topnav a {
-
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 150%;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 150%;
 }
-
-/* Change the color of links on hover */
 .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+  background-color: #ddd;
+  color: black;
 }
-
-/* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
-    display: none;
+  display: none;
 }
 .card {
   font-size: 150%;
   margin: 20%;
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
 }
-
-/* On mouse-over, add a deeper shadow */
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
-
-/* Add some padding inside the card container */
 .container {
-    margin: -20%;
-    padding: 2px 16px;
+  margin: -20%;
+  padding: 2px 16px;
 }
 .header{
   padding: 3%;
@@ -141,8 +115,6 @@ color:white;
     display: block;
   }
 }
-
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 600px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive a.icon {
