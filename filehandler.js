@@ -23,13 +23,13 @@ function initApp() {
 $(document).on('change', fileinput, function(e){
   var input = e.target;
   filelists.push(input.files);
-      for (var i = 0; i < input.files.length; i++) {
-        console.log(input.files[i].name);
+
+        console.log(input.files[0].name);
         var div = document.createElement("div");
         div.className = "well well-sm";
-        div.innerHTML = e.target.files[i].name;
+        div.innerHTML = e.target.files[0].name;
         fileplace.appendChild(div);
-      }
+
     console.log(input.files);
     console.log(filelists);
   });
@@ -41,14 +41,13 @@ function post(){
       'Author': authuser.email,
     };
   var timenow = d.getTime();
-  var filepath={};
+  var filepath=[];
   var snippet = $("#htmlsnippet").value;
-
   var maincomment = $("#comment").value;
   var storageRef = firebase.storage().ref();
       for (var i = 0; i < filelists.length; i++) {
         filepath.push(authuser.email+'/'+ filelists[i][0].name);
-        var Ref = storageRef.child( authuser.email+'/'+ filelists[i][0].name);
+        var Ref = storageRef.child(authuser.email+'/'+ filelists[i][0].name);
           Ref.put(filelists[i][0], metadata).then(function(snapshot) {
               console.log("Uploaded");
           });
