@@ -12,7 +12,7 @@ function initApp() {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       authuser = user;
-    //  contentMain();
+    contentMain();
     } else {
       // window.location.href = "login.html";
     }
