@@ -113,10 +113,13 @@ function displayPost(key,username, comments, filebin,type, snippet, mainC, time 
         load.removeChild(loadmore);
         load.appendChild(newComment);
       }
+      document.getElementById("name").onkeyup = function(event) {
+        if(event.keyCode == 13){
+        writeComment(newComment.id, newComment.value);
+              }
+       }
     newComment.onkeyup(function(event){
-    if(event.keyCode == 13){
-    writeComment(newComment.id, newComment.value);
-          }
+
       });
       if(snippet!=""){
         createSnippet(snippet,snippetSpace);
