@@ -91,6 +91,23 @@ cursor: pointer;
 .topnav .icon {
   display: none;
 }
+.comments{
+  padding:0,3%,3%,0;
+}
+.content-card{
+
+  font-size: 150%;
+  margin:2%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+.content-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.content-container {
+  margin: -20%;
+  padding: 2px 16px;
+}
 .card {
   font-size: 150%;
   margin: 20%;
