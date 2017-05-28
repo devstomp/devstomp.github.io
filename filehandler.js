@@ -73,6 +73,6 @@ console.log(e);
     var newPostKey = firebase.database().ref().child('HTML').push().key;
      var updates = {};
      updates['HTML/' + newPostKey] = postData;
-     updates['users/'+authuser+email+'/'+newPostKey] = postData;
+     updates['users/'+authuser.email+'/'+newPostKey] = postData;
      return firebase.database().ref().update(updates);
     }
