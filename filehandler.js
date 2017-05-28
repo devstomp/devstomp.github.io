@@ -113,7 +113,7 @@ function displayPost(key,username, comments, filebin,type, snippet, mainC, time 
         load.removeChild(loadmore);
         load.appendChild(newComment);
       }
-    newComment.keyup(function(event){
+    newComment.onkeyup(function(event){
     if(event.keyCode == 13){
     writeComment(newComment.id, newComment.value);
           }
