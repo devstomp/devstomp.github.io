@@ -15,7 +15,7 @@ function initApp() {
 
 
 
-      console.log(displayName);
+  console.log(authuser.uid);
     } else {
     //    window.location.href = "login.html";
     }
