@@ -21,6 +21,7 @@ function initApp() {
 function contentMain(){
   var htmlRef = firebase.database().ref('HTML');
   htmlRef.orderByKey().on('value', function(snapshot){
+    console.log(snapshot);
       snapshot.forEach(function(childSnapshot) {
         displayPost(childSnapshot.key,childSnapshot.val().Author,childSnapshot.val().Comments,childSnapshot.val().FilePath,childSnapshot.val().Type, childSnapshot.val().Snippet,  childSnapshot.val().MainComment, childSnapshot.val().Time);
       });
