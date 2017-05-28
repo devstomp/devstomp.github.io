@@ -163,7 +163,9 @@ function createSnippet(snip, dev){
       fname.innerHTML = name;
       speach.innerHTML = text;
       image.src=img;
-      image.className = "img-rounded";
+      image.className = "img-circle";
+      image.width = "25%";
+      image.height="25%";
       fname.style = "display:inline-block;font-size:60%;"
       speach.style = "font-size:40%;";
       div.appendChild(image);
