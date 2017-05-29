@@ -232,6 +232,8 @@ function createSnippet(snip, dev){
     a.appendChild(button);
     dev.appendChild(hr);
     if(ifimg){
+      console.log("It is a pic!");
+
       var display = document.createElement("img");
       display.src=downloadurl;
       display.style="display:inline-block";
@@ -252,6 +254,7 @@ function createSnippet(snip, dev){
 }
 
 function determine(filename){
+  alert(filename);
   try{
 return filename.split('.').pop().toLowerCase();
 }catch(e){
