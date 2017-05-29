@@ -26,7 +26,7 @@ function contentMain(){
       snapshot.forEach(function(childSnapshot) {
         console.log(childSnapshot.val().FilePath[0]);
           //console.log(childSnapshot.val().Comments.comment.Author);
-       displayPost(childSnapshot.key ,childSnapshot.val().Author, childSnapshot.val().Comments.comment, childSnapshot.val().FilePath, childSnapshot.val().Type, childSnapshot.val().Snippet,  childSnapshot.val().MainComment, childSnapshot.val().Time);
+       displayPost(childSnapshot.key ,childSnapshot.val().UserId, childSnapshot.val().Comments.comment, childSnapshot.val().FilePath, childSnapshot.val().Type, childSnapshot.val().Snippet,  childSnapshot.val().MainComment, childSnapshot.val().Time);
       });
   });
 }
