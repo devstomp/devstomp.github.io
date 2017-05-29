@@ -177,10 +177,10 @@ function createSnippet(snip, dev){
       var fname = document.createElement("p");
       var speach =document.createElement("p");
       var breaking = document.createElement("br");
-      fname.innerHTML = "     "+name;
+      fname.innerHTML = "     s"+name;
       speach.innerHTML = text;
       image.src=img;
-      img.style="width:20px;height:20px";
+      img.style.cssText="width:20px;height:20px";
       image.className = "img-circle";
       //this should be working
 
