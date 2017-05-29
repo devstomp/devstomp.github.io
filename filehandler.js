@@ -112,7 +112,7 @@ var storageRef = firebase.storage().ref();
 
             //}
       }catch(e){
-
+console.log(e);
       }
             loadmore.onclick = function(){
         while (commentsection.hasChildNodes()) {
@@ -127,7 +127,7 @@ var storageRef = firebase.storage().ref();
 
       //}
       }catch(e){
-
+console.log(e);
       }
         //}
         load.removeChild(loadmore);
