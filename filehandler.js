@@ -180,7 +180,7 @@ function createSnippet(snip, dev){
       fname.innerHTML = name;
       speach.innerHTML = text;
       image.src=img;
-      img.style="width:20px; height:20px";
+      img.style="width:20px;height:20px";
       image.className = "img-circle";
       //this should be working
 
@@ -191,7 +191,7 @@ function createSnippet(snip, dev){
       div.appendChild(breaking);
       div.appendChild(speach);
       dev.appendChild(div);
-    
+
     }
     function writeComment(key,writing){
       var d = new Date();
