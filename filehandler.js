@@ -254,7 +254,7 @@ function createSnippet(snip, dev){
 }
 
 function determine(filename){
-  alert(filename);
+
   try{
 return filename.toString().split('.').pop().toLowerCase();
 }catch(e){
