@@ -177,7 +177,7 @@ function createSnippet(snip, dev){
       var fname = document.createElement("p");
       var speach =document.createElement("p");
 
-      fname.innerHTML = "     "+name+": ";
+      fname.innerHTML = "\t"+name+":\t";
 
       speach.innerHTML = text;
       image.src=img;
