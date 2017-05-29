@@ -26,7 +26,7 @@ function contentMain(){
       snapshot.forEach(function(childSnapshot) {
         console.log(childSnapshot.val().FilePath[0]);
           //console.log(childSnapshot.val().Comments.comment.Author);
-       displayPost(childSnapshot.key,childSnapshot.val().Author,childSnapshot.val().Comments.comment,childSnapshot.val().FilePath,childSnapshot.val().Type, childSnapshot.val().Snippet,  childSnapshot.val().MainComment, childSnapshot.val().Time);
+       displayPost(childSnapshot.key ,childSnapshot.val().Author, childSnapshot.val().Comments.comment, childSnapshot.val().FilePath, childSnapshot.val().Type, childSnapshot.val().Snippet,  childSnapshot.val().MainComment, childSnapshot.val().Time);
       });
   });
 }
@@ -133,8 +133,8 @@ function displayPost(key,username, comments, filebin,type, snippet, mainC, time 
       }
       for(var i=0; i<filebin.length;i++){
         storageRef.child(filebin[i]).getDownloadURL().then(function(url) {
-
-          makeFileDownload(filebin.i, url,filesdownload);
+          console.log("var " + filebin + " . "+filebin[i]);
+          makeFileDownload(filebin[i], url,filesdownload);
       });
       }
       inline.appendChild(main);
