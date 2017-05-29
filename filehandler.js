@@ -191,8 +191,7 @@ function createSnippet(snip, dev){
       div.appendChild(breaking);
       div.appendChild(speach);
       dev.appendChild(div);
-      image.width = "20px";
-      image.height="20px";
+    
     }
     function writeComment(key,writing){
       var d = new Date();
