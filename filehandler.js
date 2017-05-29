@@ -107,10 +107,10 @@ console.log(comments);
 
 var storageRef = firebase.storage().ref();
     try{
-          if(comments!=[['','']]){
+          //if(comments!=[['','']]){
         makeComment(key,comments.Author, comments.ProfilePic, comments.Words, commentsection);
 
-            }
+            //}
       }catch(e){
 
       }
@@ -122,10 +122,10 @@ var storageRef = firebase.storage().ref();
         try{
 
 
-      if(comments!=[['','']]){
+      //if(comments!=[['','']]){
         makeComment(key,comments.Author, comments.ProfilePic, comments.Words, commentsection);
 
-      }
+      //}
       }catch(e){
 
       }
