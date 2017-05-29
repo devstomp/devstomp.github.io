@@ -47,7 +47,6 @@ $(document).on('change', fileinput, function(e){
 function post(){
   var database = firebase.database();
 
-  alert("snippet" + snippet + "    main comment" + maincomment);
   var d = new Date();
 
   var timenow = d.getTime();
@@ -236,7 +235,8 @@ function createSnippet(snip, dev){
 
       var display = document.createElement("img");
       display.src=downloadurl;
-      display.style="display:inline-block; width:100px; height:75px";
+      display.className="img-rounded";
+      display.style="display:inline-block; width:100px; height:75px; padding:1%;";
       dev.appendChild(display);
     }
 
