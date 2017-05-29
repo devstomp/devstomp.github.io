@@ -212,7 +212,16 @@ function createSnippet(snip, dev){
     var button= document.createElement("button");
     var text = document.createElement("p");
     var hr = document.createElement("hr");
+    var str = finame;
+    var type = determine(str);
+    var imgtype = ["jpeg","gif", "png","apng","svg","bmp","ico","jpg"];
+    var ifimg = false;
+    for(var i =0; i<imgtype.length;i++){
+    if(type == imgtype[i]){
+    ifimg =true;
+    }
 
+    }
     text.innerHTML = getSecondPart(filename.toString());
     text.style="display:inline-block;"
     button.className = "btn btn-primary";
@@ -222,11 +231,26 @@ function createSnippet(snip, dev){
     a.style="display:inline-block;";
     a.appendChild(button);
     dev.appendChild(hr);
+    if(ifimg){
+      var display = document.createElement("img");
+      display.src=downloadurl;
+      display.style="display:inline-block";
+      dev.appendChild(display);
+    }
+
     dev.appendChild(text);
     dev.appendChild(a);
     dev.appendChild(hr);
 
+
+
+
+
   }
   function getSecondPart(str) {
     return str.split('/')[1];
+}
+alert(ifimg.toString());
+function determine(filename){
+return filename.split('.').pop().toLowerCase();
 }
