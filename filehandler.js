@@ -177,7 +177,7 @@ function createSnippet(snip, dev){
       var fname = document.createElement("p");
       var speach =document.createElement("p");
       var breaking = document.createElement("br");
-      fname.innerHTML = name;
+      fname.innerHTML = "/t"+name;
       speach.innerHTML = text;
       image.src=img;
       img.style="width:20px;height:20px";
