@@ -176,8 +176,9 @@ function createSnippet(snip, dev){
       var image= document.createElement("img");
       var fname = document.createElement("p");
       var speach =document.createElement("p");
-      var breaking = document.createElement("br");
-      fname.innerHTML = "     "+name;
+
+      fname.innerHTML = "     "+name+": ";
+      speach.style="display:inline-block;"
       speach.innerHTML = text;
       image.src=img;
       image.style.width="20px";
@@ -191,7 +192,7 @@ function createSnippet(snip, dev){
       speach.style = "font-size:40%;";
       div.appendChild(image);
       div.appendChild(fname);
-      div.appendChild(breaking);
+  //    div.appendChild(breaking);
       div.appendChild(speach);
       dev.appendChild(div);
 
