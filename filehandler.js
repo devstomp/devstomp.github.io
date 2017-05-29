@@ -178,8 +178,9 @@ function createSnippet(snip, dev){
       var speach =document.createElement("p");
 
       fname.innerHTML = "\t"+name+":\t";
-
+      fname.style="padding:1%;"
       speach.innerHTML = text;
+      speach.style="padding:1%;"
       image.src=img;
       image.style.width="20px";
       image.style.height="20px";
