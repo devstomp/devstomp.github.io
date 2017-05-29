@@ -213,7 +213,7 @@ function createSnippet(snip, dev){
     var text = document.createElement("p");
     var hr = document.createElement("hr");
 
-    text.innerHTML = filename;
+    text.innerHTML = getSecondPart(filename);
     text.style="display:inline-block;"
     button.className = "btn btn-primary";
     button.innerHTML = "Download";
@@ -227,3 +227,6 @@ function createSnippet(snip, dev){
     dev.appendChild(hr);
 
   }
+  function getSecondPart(str) {
+    return str.split('/')[1];
+}
