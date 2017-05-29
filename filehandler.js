@@ -178,7 +178,7 @@ function createSnippet(snip, dev){
       var speach =document.createElement("p");
 
       fname.innerHTML = "     "+name+": ";
-    
+
       speach.innerHTML = text;
       image.src=img;
       image.style.width="20px";
@@ -189,7 +189,7 @@ function createSnippet(snip, dev){
       //this should be working
 
       fname.style = "display:inline-block;font-size:80%;"
-      speach.style = "font-size:40%;display:inline-block;";
+      speach.style = "font-size:70%;display:inline-block;";
       div.appendChild(image);
       div.appendChild(fname);
   //    div.appendChild(breaking);
