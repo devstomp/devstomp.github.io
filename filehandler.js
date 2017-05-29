@@ -180,6 +180,7 @@ function createSnippet(snip, dev){
       fname.innerHTML = name;
       speach.innerHTML = text;
       image.src=img;
+      img.style="width:20px; height:20px";
       image.className = "img-circle";
       //this should be working
 
