@@ -236,7 +236,7 @@ function createSnippet(snip, dev){
 
       var display = document.createElement("img");
       display.src=downloadurl;
-      display.style="display:inline-block";
+      display.style="display:inline-block; width:100px; height:75px";
       dev.appendChild(display);
     }
 
