@@ -252,5 +252,9 @@ function createSnippet(snip, dev){
 }
 alert(ifimg.toString());
 function determine(filename){
+  try{
 return filename.split('.').pop().toLowerCase();
+}catch(e){
+  console.log(e);
+}
 }
