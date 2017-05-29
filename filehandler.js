@@ -105,22 +105,31 @@ function displayPost(key,username, comments, filebin,type, snippet, mainC, time 
       loadmore.className="btn btn-default";
       main.innerHTML= username+":"+mainC+" - "+type;
 console.log(comments);
-      if(comments!=[['','']]){
+
+var storageRef = firebase.storage().ref();
+    try{
+          if(comments!=[['','']]){
         makeComment(key,comments.Author, comments.ProfilePic, comments.Words, commentsection);
 
-      }
+            }
+      }catch(e){
 
-        var storageRef = firebase.storage().ref();
-      loadmore.onclick = function(){
+      }
+            loadmore.onclick = function(){
         while (commentsection.hasChildNodes()) {
               commentsection.removeChild(commentsection.lastChild);
           }
       //  for(var i=0;i<comments.length; i++){
+        try{
+
+
       if(comments!=[['','']]){
         makeComment(key,comments.Author, comments.ProfilePic, comments.Words, commentsection);
 
       }
+      }catch(e){
 
+      }
         //}
         load.removeChild(loadmore);
         load.appendChild(newComment);
