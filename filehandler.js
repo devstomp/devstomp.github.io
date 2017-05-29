@@ -250,7 +250,7 @@ function createSnippet(snip, dev){
   function getSecondPart(str) {
     return str.split('/')[1];
 }
-alert(ifimg.toString());
+
 function determine(filename){
   try{
 return filename.split('.').pop().toLowerCase();
