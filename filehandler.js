@@ -49,9 +49,7 @@ function post(){
 
   alert("snippet" + snippet + "    main comment" + maincomment);
   var d = new Date();
-    var metadata = {
-      'Author': authuser.uid,
-    };
+
   var timenow = d.getTime();
   var filepath=[];
 
@@ -70,7 +68,8 @@ function post(){
 
     var postData = {
       Time: timenow,
-      Author: authuser.uid,
+      UserId: authuser.displayName,
+      Author:authuser.uid,
       MainComment:maincomment.value,
       FilePath:filepath,
       Type:"HTML",
@@ -104,7 +103,7 @@ function displayPost(key,username, comments, filebin,type, snippet, mainC, time 
       loadmore.style="width:100%";
       loadmore.innerHTML = "Load more";
       loadmore.className="btn btn-default";
-      main.innerHTML= authuser.name+":"+mainC+" - "+type;
+      main.innerHTML= username+":"+mainC+" - "+type;
       if(comments!=[['','']])
       makeComment(key,comments.Author, comments.ProfilePic, comments.Words, commentsection);
 
