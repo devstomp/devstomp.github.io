@@ -178,9 +178,9 @@ function createSnippet(snip, dev){
       var speach =document.createElement("p");
 
       fname.innerHTML = "\t"+name+":\t";
-      fname.style="padding:1%;"
+
       speach.innerHTML = text;
-      speach.style="padding:1%;"
+
       image.src=img;
       image.style.width="20px";
       image.style.height="20px";
@@ -189,8 +189,8 @@ function createSnippet(snip, dev){
       image.className = "img-circle";
       //this should be working
 
-      fname.style = "display:inline-block;font-size:80%;"
-      speach.style = "font-size:70%;display:inline-block;";
+      fname.style = "display:inline-block;font-size:80%;padding:1%;"
+      speach.style = "font-size:70%;display:inline-block;padding:1%;";
       div.appendChild(image);
       div.appendChild(fname);
   //    div.appendChild(breaking);
